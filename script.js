@@ -8,49 +8,49 @@
    ============================================================ */
 
 const RARITY = {
-  common:    { name: 'Обычный',     color: '#9aa4b8' },
-  uncommon:  { name: 'Необычный',   color: '#4ade80' },
-  rare:      { name: 'Редкий',      color: '#38bdf8' },
-  epic:      { name: 'Эпический',   color: '#a855f7' },
-  legendary: { name: 'Легендарный', color: '#fbbf24' },
-  mythical:  { name: 'Мифический',  color: '#ef4444' },
-  secret:    { name: 'Секретный',   color: '#ff2fd0' }
+  common:    { name: 'Обычный', en: 'Common',     color: '#9aa4b8' },
+  uncommon:  { name: 'Необычный', en: 'Uncommon',   color: '#4ade80' },
+  rare:      { name: 'Редкий', en: 'Rare',      color: '#38bdf8' },
+  epic:      { name: 'Эпический', en: 'Epic',   color: '#a855f7' },
+  legendary: { name: 'Легендарный', en: 'Legendary', color: '#fbbf24' },
+  mythical:  { name: 'Мифический', en: 'Mythical',  color: '#ef4444' },
+  secret:    { name: 'Секретный', en: 'Secret',   color: '#ff2fd0' }
 };
 
 const ITEMS = {
   /* ---- common ---- */
-  coin:      { name: 'Монета',      icon: '🪙', rarity: 'common',    value: 10 },
-  bandage:   { name: 'Бинт',        icon: '🩹', rarity: 'common',    value: 20 },
-  battery:   { name: 'Батарейка',   icon: '🔋', rarity: 'common',    value: 25 },
-  candle:    { name: 'Свеча',       icon: '🕯️', rarity: 'common',    value: 30 },
-  lighter:   { name: 'Зажигалка',   icon: '🔥', rarity: 'common',    value: 40 },
+  coin:      { name: 'Монета', en: 'Coin',      icon: '🪙', rarity: 'common',    value: 10 },
+  bandage:   { name: 'Бинт', en: 'Bandage',        icon: '🩹', rarity: 'common',    value: 20 },
+  battery:   { name: 'Батарейка', en: 'Battery',   icon: '🔋', rarity: 'common',    value: 25 },
+  candle:    { name: 'Свеча', en: 'Candle',       icon: '🕯️', rarity: 'common',    value: 30 },
+  lighter:   { name: 'Зажигалка', en: 'Lighter',   icon: '🔥', rarity: 'common',    value: 40 },
   /* ---- uncommon ---- */
-  lockpick:  { name: 'Отмычка',     icon: '🗝️', rarity: 'uncommon',  value: 70 },
-  vitamins:  { name: 'Витамины',    icon: '💊', rarity: 'uncommon',  value: 85 },
-  flashlight:{ name: 'Фонарик',     icon: '🔦', rarity: 'uncommon',  value: 100 },
-  padlock:   { name: 'Замок',       icon: '🔒', rarity: 'uncommon',  value: 120 },
+  lockpick:  { name: 'Отмычка', en: 'Lockpick',     icon: '🗝️', rarity: 'uncommon',  value: 70 },
+  vitamins:  { name: 'Витамины', en: 'Vitamins',    icon: '💊', rarity: 'uncommon',  value: 85 },
+  flashlight:{ name: 'Фонарик', en: 'Flashlight',     icon: '🔦', rarity: 'uncommon',  value: 100 },
+  padlock:   { name: 'Замок', en: 'Padlock',       icon: '🔒', rarity: 'uncommon',  value: 120 },
   /* ---- rare ---- */
-  window:    { name: 'Окно',        icon: '🪟', rarity: 'rare',      value: 200 },
-  timothy:   { name: 'Тимоти',      icon: '🕷️', rarity: 'rare',      value: 240 },
-  screech:   { name: 'Скрежет',     icon: '👻', rarity: 'rare',      value: 280 },
-  eyes:      { name: 'Глаза',       icon: '👁️', rarity: 'rare',      value: 320 },
+  window:    { name: 'Окно', en: 'Window',        icon: '🪟', rarity: 'rare',      value: 200 },
+  timothy:   { name: 'Тимоти', en: 'Timothy',      icon: '🕷️', rarity: 'rare',      value: 240 },
+  screech:   { name: 'Скрежет', en: 'Screech',     icon: '👻', rarity: 'rare',      value: 280 },
+  eyes:      { name: 'Глаза', en: 'Eyes',       icon: '👁️', rarity: 'rare',      value: 320 },
   /* ---- epic ---- */
-  hide:      { name: 'Хайд',        icon: '🚪', rarity: 'epic',      value: 600 },
-  rush:      { name: 'Раш',         icon: '💨', rarity: 'epic',      value: 750 },
-  ambush:    { name: 'Амбуш',       icon: '⚡', rarity: 'epic',      value: 900 },
-  halt:      { name: 'Хальт',       icon: '🛑', rarity: 'epic',      value: 1100 },
+  hide:      { name: 'Хайд', en: 'Hide',        icon: '🚪', rarity: 'epic',      value: 600 },
+  rush:      { name: 'Раш', en: 'Rush',         icon: '💨', rarity: 'epic',      value: 750 },
+  ambush:    { name: 'Амбуш', en: 'Ambush',       icon: '⚡', rarity: 'epic',      value: 900 },
+  halt:      { name: 'Хальт', en: 'Halt',       icon: '🛑', rarity: 'epic',      value: 1100 },
   /* ---- legendary ---- */
-  seek:      { name: 'Сек',         icon: '🖐️', rarity: 'legendary', value: 2000 },
-  figure:    { name: 'Фигура',      icon: '🗿', rarity: 'legendary', value: 2600 },
-  glitch:    { name: 'Глитч',       icon: '👾', rarity: 'legendary', value: 3200 },
+  seek:      { name: 'Сек', en: 'Seek',         icon: '🖐️', rarity: 'legendary', value: 2000 },
+  figure:    { name: 'Фигура', en: 'Figure',      icon: '🗿', rarity: 'legendary', value: 2600 },
+  glitch:    { name: 'Глитч', en: 'Glitch',       icon: '👾', rarity: 'legendary', value: 3200 },
   /* ---- mythical ---- */
-  crucifix:  { name: 'Крусификс',   icon: '✝️', rarity: 'mythical',  value: 6000 },
-  a90:       { name: 'A-90',        icon: '☠️', rarity: 'mythical',  value: 8000 },
-  a120:      { name: 'A-120',       icon: '🌀', rarity: 'mythical',  value: 10000 },
+  crucifix:  { name: 'Крусификс', en: 'Crucifix',   icon: '✝️', rarity: 'mythical',  value: 6000 },
+  a90:       { name: 'A-90', en: 'A-90',        icon: '☠️', rarity: 'mythical',  value: 8000 },
+  a120:      { name: 'A-120', en: 'A-120',       icon: '🌀', rarity: 'mythical',  value: 10000 },
   /* ---- secret ---- */
-  jack:      { name: 'Джек',        icon: '🎃', rarity: 'secret',    value: 15000 },
-  shadow:    { name: 'Тень',        icon: '🌑', rarity: 'secret',    value: 20000 },
-  voidkey:   { name: 'Войд',        icon: '🕳️', rarity: 'secret',    value: 30000 }
+  jack:      { name: 'Джек', en: 'Jack',        icon: '🎃', rarity: 'secret',    value: 15000 },
+  shadow:    { name: 'Тень', en: 'Shadow',        icon: '🌑', rarity: 'secret',    value: 20000 },
+  voidkey:   { name: 'Войд', en: 'Void',        icon: '🕳️', rarity: 'secret',    value: 30000 }
 };
 
 const BY_RARITY = {};
@@ -61,15 +61,15 @@ Object.keys(ITEMS).forEach(function (k) {
 });
 
 const CASES = [
-  { id: 'c1', name: 'Обычный кейс',     icon: '📦', price: 100,
+  { id: 'c1', name: 'Обычный кейс', en: 'Common Case',     icon: '📦', price: 100,
     odds: { common: 70, uncommon: 25, rare: 4.5, epic: 0.5 } },
-  { id: 'c2', name: 'Редкий кейс',      icon: '🎁', price: 500,
+  { id: 'c2', name: 'Редкий кейс', en: 'Rare Case',      icon: '🎁', price: 500,
     odds: { common: 25, uncommon: 40, rare: 27, epic: 7, legendary: 1 } },
-  { id: 'c3', name: 'Эпический кейс',   icon: '💼', price: 1500,
+  { id: 'c3', name: 'Эпический кейс', en: 'Epic Case',   icon: '💼', price: 1500,
     odds: { uncommon: 30, rare: 42, epic: 23, legendary: 4.5, mythical: 0.5 } },
-  { id: 'c4', name: 'Легендарный кейс', icon: '👑', price: 5000,
+  { id: 'c4', name: 'Легендарный кейс', en: 'Legendary Case', icon: '👑', price: 5000,
     odds: { rare: 28, epic: 46, legendary: 21, mythical: 4.5, secret: 0.5 } },
-  { id: 'c5', name: 'Кейс Бездны',      icon: '🕳️', price: 20000,
+  { id: 'c5', name: 'Кейс Бездны', en: 'Abyss Case',      icon: '🕳️', price: 20000,
     odds: { epic: 38, legendary: 42, mythical: 17, secret: 3 } }
 ];
 
@@ -149,6 +149,60 @@ const Sound = (function () {
 })();
 
 /* ============================================================
+   2b. ЯЗЫК (RU / EN)
+   ============================================================ */
+
+let lang = 'ru';
+
+const STR = {
+  ru: {
+    docTitle: 'DOORS BATTLE — симулятор кейсов',
+    sound: 'Звук', reset: 'Сбросить прогресс', langBtn: 'EN', langTitle: 'Switch to English',
+    tabCases: 'Кейсы', tabUpgrades: 'Апгрейды',
+    reelHint: 'Выберите кейс, чтобы открыть',
+    inventory: 'Инвентарь', sellAll: 'Продать всё',
+    stepItem: '1. Выберите предмет', stepTarget: '2. Выберите цель',
+    labelItem: 'выберите предмет', labelTarget: 'выберите цель',
+    spin: 'Прокачать', spinning: 'Крутим…',
+    sell: 'Продать', take: 'Забрать', empty: 'Пусто',
+    bestDrop: 'Лучший дроп:',
+    invEmpty: 'Пусто… открой кейс 📦', invEmptyToast: 'Инвентарь пуст',
+    wheelBusy: 'Колесо крутится…', wait: 'Подожди…', waitSpin: 'Подожди окончания вращения',
+    soldFor: 'Продано за', soldAllFor: 'Продано всё за',
+    noCoins: 'Недостаточно монет!',
+    youGot: 'Вы получили', greatDrop: '🔥 Отличный дроп!', upgradeWin: 'Апгрейд удался!',
+    itemLost: '💀 Предмет потерян…',
+    chLow: 'низкий шанс', chMid: 'средний шанс', chHigh: 'высокий шанс', chGreat: 'отличный шанс',
+    pickItemFirst: 'Сначала выберите предмет', notFound: 'Предмет не найден', maxItem: 'Это максимальный предмет 👑',
+    resetConfirm: 'Сбросить весь прогресс? Это действие нельзя отменить.', resetDone: 'Прогресс сброшен'
+  },
+  en: {
+    docTitle: 'DOORS BATTLE — case simulator',
+    sound: 'Sound', reset: 'Reset progress', langBtn: 'RU', langTitle: 'Переключить на русский',
+    tabCases: 'Cases', tabUpgrades: 'Upgrades',
+    reelHint: 'Pick a case to open it',
+    inventory: 'Inventory', sellAll: 'Sell all',
+    stepItem: '1. Pick an item', stepTarget: '2. Pick a target',
+    labelItem: 'pick an item', labelTarget: 'pick a target',
+    spin: 'Upgrade', spinning: 'Spinning…',
+    sell: 'Sell', take: 'Keep', empty: 'Empty',
+    bestDrop: 'Best drop:',
+    invEmpty: 'Nothing here yet. Open a case 📦', invEmptyToast: 'Inventory is empty',
+    wheelBusy: 'The wheel is spinning…', wait: 'Hold on…', waitSpin: 'Wait for the spin to finish',
+    soldFor: 'Sold for', soldAllFor: 'Sold everything for',
+    noCoins: 'Not enough coins',
+    youGot: 'You got', greatDrop: '🔥 Great drop!', upgradeWin: 'Upgrade succeeded!',
+    itemLost: '💀 Item lost…',
+    chLow: 'low chance', chMid: 'fair chance', chHigh: 'high chance', chGreat: 'great chance',
+    pickItemFirst: 'Pick an item first', notFound: 'Item not found', maxItem: 'This is the top item 👑',
+    resetConfirm: 'Reset all progress? This can’t be undone.', resetDone: 'Progress reset'
+  }
+};
+
+function t(k) { return STR[lang][k]; }
+function nm(o) { return lang === 'en' ? o.en : o.name; }
+
+/* ============================================================
    3. СОСТОЯНИЕ + СОХРАНЕНИЕ
    ============================================================ */
 
@@ -168,7 +222,8 @@ function save() {
       inventory: state.inventory,
       uid: state.uid,
       stats: state.stats,
-      sound: Sound.enabled
+      sound: Sound.enabled,
+      lang: lang
     }));
   } catch (e) { /* приватный режим */ }
 }
@@ -190,6 +245,7 @@ function load() {
       state.stats = Object.assign(state.stats, d.stats);
     }
     if (typeof d.sound === 'boolean') Sound.setEnabled(d.sound);
+    if (d.lang === 'en' || d.lang === 'ru') lang = d.lang;
   } catch (e) { /* повреждённое сохранение — игнорируем */ }
 }
 
@@ -198,7 +254,7 @@ function load() {
    ============================================================ */
 
 const $ = function (id) { return document.getElementById(id); };
-const fmt = function (n) { return Math.round(n).toLocaleString('ru-RU'); };
+const fmt = function (n) { return Math.round(n).toLocaleString(lang === 'en' ? 'en-US' : 'ru-RU'); };
 
 function weightedPick(odds) {
   let total = 0;
@@ -257,7 +313,15 @@ const els = {
    6. ОБЩИЙ РЕНДЕР
    ============================================================ */
 
+let shownCoins = null;
 function updateBalance() {
+  if (shownCoins !== null && shownCoins !== state.coins) {
+    const bal = els.coins.parentElement;
+    bal.classList.remove('is-up', 'is-down');
+    void bal.offsetWidth; // перезапуск анимации
+    bal.classList.add(state.coins > shownCoins ? 'is-up' : 'is-down');
+  }
+  shownCoins = state.coins;
   els.coins.textContent = fmt(state.coins);
 }
 
@@ -277,11 +341,14 @@ function renderCases() {
     });
 
     card.innerHTML =
-      '<div class="case-icon">' + c.icon + '</div>' +
-      '<div class="case-name">' + c.name + '</div>' +
-      '<div class="case-price' + (poor ? ' is-poor' : '') + '">🪙 ' + fmt(c.price) + '</div>' +
-      '<div class="case-best">Лучший дроп: <b style="color:' + RARITY[topRar].color + '">' +
-        RARITY[topRar].name + '</b></div>';
+      '<div class="door">' +
+        '<div class="case-icon">' + c.icon + '</div>' +
+        '<div class="case-name">' + nm(c) + '</div>' +
+        '<div class="case-price' + (poor ? ' is-poor' : '') + '">' + fmt(c.price) + '</div>' +
+        '<div class="case-best">' + t('bestDrop') + ' <b style="color:' + RARITY[topRar].color + '">' +
+          nm(RARITY[topRar]) + '</b></div>' +
+        '<span class="knob"></span>' +
+      '</div>';
 
     card.addEventListener('click', function () { openCase(c); });
     frag.appendChild(card);
@@ -305,8 +372,8 @@ function makeItemCard(inv, mode) {
 
   let html =
     '<div class="ic-icon">' + it.icon + '</div>' +
-    '<div class="ic-name">' + it.name + '</div>' +
-    '<div class="ic-rar">' + r.name + '</div>' +
+    '<div class="ic-name">' + nm(it) + '</div>' +
+    '<div class="ic-rar">' + nm(r) + '</div>' +
     '<div class="ic-val">🪙 ' + fmt(it.value) + '</div>';
 
   if (mode === 'target') {
@@ -320,10 +387,11 @@ function makeItemCard(inv, mode) {
   card.innerHTML = html;
 
   if (mode === 'sell') {
+    card.classList.add('is-static');
     const b = document.createElement('button');
     b.className = 'sell-btn';
     b.type = 'button';
-    b.textContent = 'Продать';
+    b.textContent = t('sell');
     b.addEventListener('click', function (e) {
       e.stopPropagation();
       sellItem(inv.uid);
@@ -342,7 +410,7 @@ function renderInventory(container, mode) {
   const list = sortedInventory();
 
   if (!list.length) {
-    container.innerHTML = '<div class="empty">Пусто… открой кейс 📦</div>';
+    container.innerHTML = '<div class="empty">' + t('invEmpty') + '</div>';
     return;
   }
 
@@ -353,8 +421,8 @@ function renderInventory(container, mode) {
 
 function sellItem(uid) {
   // ЗАЩИТА: во время вращения колеса ничего продавать нельзя
-  if (wheelSpinning) { toast('Колесо крутится…'); Sound.error(); return; }
-  if (spinningCase)  { toast('Подожди…'); Sound.error(); return; }
+  if (wheelSpinning) { toast(t('wheelBusy')); Sound.error(); return; }
+  if (spinningCase)  { toast(t('wait')); Sound.error(); return; }
 
   const i = state.inventory.findIndex(function (x) { return x.uid === uid; });
   if (i === -1) return;
@@ -363,7 +431,7 @@ function sellItem(uid) {
   state.coins += val;
   if (selectedUid === uid) { selectedUid = null; targetKey = null; }
   Sound.coin();
-  toast('Продано за 🪙 ' + fmt(val));
+  toast(t('soldFor') + ' 🪙 ' + fmt(val));
   updateAll();
 }
 
@@ -371,7 +439,6 @@ function sellItem(uid) {
    7. КЕЙСЫ — РУЛЕТКА
    ============================================================ */
 
-const REEL_STEP   = 134;   // 124px карточка + 10px отступ
 const REEL_COUNT  = 54;
 const REEL_WIN_IX = 46;
 
@@ -385,14 +452,14 @@ function makeReelItem(key) {
   d.style.setProperty('--c', r.color);
   d.innerHTML =
     '<div class="ri-icon">' + it.icon + '</div>' +
-    '<div class="ri-name">' + it.name + '</div>' +
-    '<div class="ri-rar">' + r.name + '</div>';
+    '<div class="ri-name">' + nm(it) + '</div>' +
+    '<div class="ri-rar">' + nm(r) + '</div>';
   return d;
 }
 
 function openCase(c) {
   if (spinningCase) return;
-  if (state.coins < c.price) { toast('Недостаточно монет!'); Sound.error(); return; }
+  if (state.coins < c.price) { toast(t('noCoins')); Sound.error(); return; }
 
   state.coins -= c.price;
   state.stats.casesOpened++;
@@ -411,9 +478,16 @@ function openCase(c) {
     frag.appendChild(makeReelItem(i === REEL_WIN_IX ? winKey : rollItem(c)));
   }
   els.reel.appendChild(frag);
+  $('reelHint').style.display = 'none';
+  els.caseGrid.classList.add('is-busy');
+
+  // размер шага берём из реального DOM (на мобильных карточки меньше)
+  const first = els.reel.firstElementChild;
+  const itemW = first.offsetWidth;
+  const REEL_STEP = itemW + (parseFloat(getComputedStyle(first).marginRight) || 0);
 
   const wrapW = els.reelWrap.clientWidth;
-  const endX = wrapW / 2 - (REEL_WIN_IX * REEL_STEP + 62) + (Math.random() - 0.5) * 55;
+  const endX = wrapW / 2 - (REEL_WIN_IX * REEL_STEP + itemW / 2) + (Math.random() - 0.5) * itemW * 0.6;
 
   els.reel.style.transition = 'none';
   els.reel.style.transform = 'translateX(0)';
@@ -444,10 +518,13 @@ function openCase(c) {
 
 function finishCase(winKey) {
   spinningCase = false;
+  els.caseGrid.classList.remove('is-busy');
+  const winEl = els.reel.children[REEL_WIN_IX];
+  if (winEl) winEl.classList.add('is-win');
   const uid = state.uid++;
   state.inventory.push({ uid: uid, key: winKey });
   updateAll();
-  showModal(winKey, uid, ITEMS[winKey].value >= 2000 ? '🔥 Отличный дроп!' : 'Вы получили');
+  showModal(winKey, uid, ITEMS[winKey].value >= 2000 ? 'greatDrop' : 'youGot');
 }
 
 /* ============================================================
@@ -496,10 +573,10 @@ function getChance() {
 }
 
 function chanceLabel(ch) {
-  if (ch < 0.20) return 'низкий шанс';
-  if (ch < 0.55) return 'средний шанс';
-  if (ch < 0.80) return 'высокий шанс';
-  return 'отличный шанс';
+  if (ch < 0.20) return t('chLow');
+  if (ch < 0.55) return t('chMid');
+  if (ch < 0.80) return t('chHigh');
+  return t('chGreat');
 }
 
 /* ---- размер ---- */
@@ -527,13 +604,13 @@ function drawWheel() {
   /* фон */
   ctx2d.beginPath();
   ctx2d.arc(cx, cy, R, 0, Math.PI * 2);
-  ctx2d.fillStyle = '#0c0c11';
+  ctx2d.fillStyle = '#150e0b';
   ctx2d.fill();
 
   /* внешнее тонкое кольцо */
   ctx2d.beginPath();
   ctx2d.arc(cx, cy, R - 1, 0, Math.PI * 2);
-  ctx2d.strokeStyle = '#2c2c38';
+  ctx2d.strokeStyle = '#8a6a3a';
   ctx2d.lineWidth = 2;
   ctx2d.stroke();
 
@@ -547,7 +624,7 @@ function drawWheel() {
     ctx2d.beginPath();
     ctx2d.moveTo(cx + Math.cos(a) * tickOuter, cy + Math.sin(a) * tickOuter);
     ctx2d.lineTo(cx + Math.cos(a) * (big ? tickInner - 5 : tickInner), cy + Math.sin(a) * (big ? tickInner - 5 : tickInner));
-    ctx2d.strokeStyle = big ? '#4a4a5e' : '#2a2a36';
+    ctx2d.strokeStyle = big ? '#c9a25a' : '#4a3424';
     ctx2d.stroke();
   }
 
@@ -556,7 +633,7 @@ function drawWheel() {
   const ringW = 28;
   ctx2d.beginPath();
   ctx2d.arc(cx, cy, ringR, 0, Math.PI * 2);
-  ctx2d.strokeStyle = '#1a1a22';
+  ctx2d.strokeStyle = '#241a14';
   ctx2d.lineWidth = ringW;
   ctx2d.stroke();
 
@@ -568,7 +645,7 @@ function drawWheel() {
     const segs = Math.max(3, Math.ceil(sweep / (Math.PI / 180) / 2.5));
 
     ctx2d.save();
-    ctx2d.shadowColor = 'rgba(217,242,75,.30)';
+    ctx2d.shadowColor = 'rgba(143,216,255,.35)';
     ctx2d.shadowBlur = 16;
     ctx2d.lineCap = 'butt';
     ctx2d.lineWidth = ringW;
@@ -588,7 +665,7 @@ function drawWheel() {
     ctx2d.beginPath();
     ctx2d.arc(cx + Math.cos(endA) * ringR, cy + Math.sin(endA) * ringR, 5, 0, Math.PI * 2);
     ctx2d.fillStyle = '#ffffff';
-    ctx2d.shadowColor = '#d9f24b';
+    ctx2d.shadowColor = '#8fd8ff';
     ctx2d.shadowBlur = 14;
     ctx2d.fill();
     ctx2d.shadowBlur = 0;
@@ -597,9 +674,9 @@ function drawWheel() {
   /* центральный круг */
   ctx2d.beginPath();
   ctx2d.arc(cx, cy, ringR - ringW / 2 - 8, 0, Math.PI * 2);
-  ctx2d.fillStyle = '#0d0d13';
+  ctx2d.fillStyle = '#1a110d';
   ctx2d.fill();
-  ctx2d.strokeStyle = '#20202a';
+  ctx2d.strokeStyle = '#3a2a1f';
   ctx2d.lineWidth = 1.5;
   ctx2d.stroke();
 }
@@ -615,7 +692,7 @@ function selectItem(uid) {
 
 function selectTarget(key) {
   if (wheelSpinning) return;
-  if (!selectedUid) { toast('Сначала выберите предмет'); Sound.error(); return; }
+  if (!selectedUid) { toast(t('pickItemFirst')); Sound.error(); return; }
   Sound.click();
   targetKey = key;
   updateAll();
@@ -631,12 +708,12 @@ function renderSlots() {
     els.slotFrom.style.setProperty('--c', r.color);
     els.slotFrom.innerHTML =
       '<div class="slot-icon">' + it.icon + '</div>' +
-      '<div class="slot-name">' + it.name + '</div>' +
+      '<div class="slot-name">' + nm(it) + '</div>' +
       '<div class="slot-val">🪙 ' + fmt(it.value) + '</div>';
   } else {
     els.slotFrom.className = 'slot';
     els.slotFrom.style.removeProperty('--c');
-    els.slotFrom.innerHTML = '<span class="slot-empty">Пусто</span>';
+    els.slotFrom.innerHTML = '<span class="slot-empty">' + t('empty') + '</span>';
   }
 
   /* to */
@@ -646,12 +723,12 @@ function renderSlots() {
     els.slotTo.style.setProperty('--c', r.color);
     els.slotTo.innerHTML =
       '<div class="slot-icon">' + it.icon + '</div>' +
-      '<div class="slot-name">' + it.name + '</div>' +
+      '<div class="slot-name">' + nm(it) + '</div>' +
       '<div class="slot-val">🪙 ' + fmt(it.value) + '</div>';
   } else {
     els.slotTo.className = 'slot';
     els.slotTo.style.removeProperty('--c');
-    els.slotTo.innerHTML = '<span class="slot-empty">Пусто</span>';
+    els.slotTo.innerHTML = '<span class="slot-empty">' + t('empty') + '</span>';
   }
 }
 
@@ -659,13 +736,13 @@ function renderTargets() {
   els.invTargets.innerHTML = '';
 
   if (!selectedUid) {
-    els.invTargets.innerHTML = '<div class="empty">Сначала выберите предмет</div>';
+    els.invTargets.innerHTML = '<div class="empty">' + t('pickItemFirst') + '</div>';
     return;
   }
   const sel = state.inventory.find(function (x) { return x.uid === selectedUid; });
   if (!sel) {
     selectedUid = null;
-    els.invTargets.innerHTML = '<div class="empty">Предмет не найден</div>';
+    els.invTargets.innerHTML = '<div class="empty">' + t('notFound') + '</div>';
     return;
   }
 
@@ -675,7 +752,7 @@ function renderTargets() {
     .sort(function (a, b) { return ITEMS[a].value - ITEMS[b].value; });
 
   if (!pool.length) {
-    els.invTargets.innerHTML = '<div class="empty">Это максимальный предмет 👑</div>';
+    els.invTargets.innerHTML = '<div class="empty">' + t('maxItem') + '</div>';
     return;
   }
 
@@ -688,8 +765,8 @@ function renderTargets() {
     card.style.setProperty('--c', r.color);
     card.innerHTML =
       '<div class="ic-icon">' + it.icon + '</div>' +
-      '<div class="ic-name">' + it.name + '</div>' +
-      '<div class="ic-rar">' + r.name + '</div>' +
+      '<div class="ic-name">' + nm(it) + '</div>' +
+      '<div class="ic-rar">' + nm(r) + '</div>' +
       '<div class="ic-val">🪙 ' + fmt(it.value) + '</div>' +
       '<div class="ic-chance">🎯 ' + (ch * 100).toFixed(1) + '%</div>';
     card.addEventListener('click', function () { selectTarget(k); });
@@ -708,11 +785,11 @@ function updateWheelUI() {
   } else if (selectedUid) {
     els.wheelPct.textContent = '—';
     els.wheelPct.classList.add('is-neutral');
-    els.wheelLabel.textContent = 'выберите цель';
+    els.wheelLabel.textContent = t('labelTarget');
   } else {
     els.wheelPct.textContent = '—';
     els.wheelPct.classList.add('is-neutral');
-    els.wheelLabel.textContent = 'выберите предмет';
+    els.wheelLabel.textContent = t('labelItem');
   }
 
   els.spinBtn.disabled = !(selectedUid && targetKey) || wheelSpinning;
@@ -732,7 +809,7 @@ function spinWheel() {
 
   wheelSpinning = true;
   els.spinBtn.disabled = true;
-  els.spinBtn.textContent = 'КРУТИМ…';
+  els.spinBtn.textContent = t('spinning');
 
   // ========== ЗАЩИТА ОТ БАГА ==========
   // 1. Запоминаем предмет, поставленный на кон
@@ -756,7 +833,7 @@ function spinWheel() {
   els.slotFrom.style.setProperty('--c', stakeR.color);
   els.slotFrom.innerHTML =
     '<div class="slot-icon">' + stakeIt.icon + '</div>' +
-    '<div class="slot-name">' + stakeIt.name + '</div>' +
+    '<div class="slot-name">' + nm(stakeIt) + '</div>' +
     '<div class="slot-val">🪙 ' + fmt(stakeIt.value) + '</div>';
 
   save();
@@ -808,15 +885,20 @@ function spinWheel() {
 
 function finishSpin(isWin) {
   wheelSpinning = false;
-  els.spinBtn.textContent = 'ПРОКАЧАТЬ';
+  els.spinBtn.textContent = t('spin');
 
   // снимаем блокировку
   els.invUpgrade.classList.remove('is-locked');
   els.invTargets.classList.remove('is-locked');
   els.sellAllBtn.disabled = false;
 
-  const staked = spinStake;
   spinStake = null;
+
+  // вспышка колеса: зелёная / красная
+  els.wheel.classList.remove('is-win', 'is-lose');
+  els.wheel.classList.add(isWin ? 'is-win' : 'is-lose');
+  clearTimeout(window.__flashT);
+  window.__flashT = setTimeout(function () { els.wheel.classList.remove('is-win', 'is-lose'); }, 1400);
 
   // предмет уже удалён из инвентаря в начале спина — здесь только добавляем выигрыш
 
@@ -830,14 +912,14 @@ function finishSpin(isWin) {
     targetKey = null;
     updateAll();
     Sound.win();
-    showModal(won, newUid, '🎉 АПГРЕЙД УДАЛСЯ!');
+    showModal(won, newUid, 'upgradeWin');
   } else {
     state.stats.upgradesLose++;
     selectedUid = null;
     targetKey = null;
     updateAll();
     Sound.lose();
-    toast('💀 Предмет потерян…');
+    toast(t('itemLost'));
   }
 }
 
@@ -846,21 +928,24 @@ function finishSpin(isWin) {
    ============================================================ */
 
 let modalUid = null;
+let modalKey = null, modalTitleKey = null;
 
-function showModal(key, uid, title) {
+function showModal(key, uid, titleKey, silent) {
   const it = ITEMS[key], r = RARITY[it.rarity];
   modalUid = uid;
+  modalKey = key;
+  modalTitleKey = titleKey || 'youGot';
 
-  els.modalTitle.textContent = title || 'Вы получили';
+  els.modalTitle.textContent = t(modalTitleKey);
   els.modalItem.style.setProperty('--c', r.color);
   els.modalItem.innerHTML =
     '<div class="mi-icon">' + it.icon + '</div>' +
-    '<div class="mi-name">' + it.name + '</div>' +
-    '<div class="mi-rar">' + r.name + '</div>' +
+    '<div class="mi-name">' + nm(it) + '</div>' +
+    '<div class="mi-rar">' + nm(r) + '</div>' +
     '<div class="mi-val">🪙 ' + fmt(it.value) + '</div>';
 
   els.modal.classList.add('is-open');
-  Sound.ding();
+  if (!silent) Sound.ding();
 }
 
 function closeModal() {
@@ -907,10 +992,10 @@ els.spinBtn.addEventListener('click', spinWheel);
 
 els.sellAllBtn.addEventListener('click', function () {
   // ЗАЩИТА: во время вращения колеса / прокрутки кейса продавать нельзя
-  if (wheelSpinning) { toast('Колесо крутится…'); Sound.error(); return; }
-  if (spinningCase)  { toast('Подожди…'); Sound.error(); return; }
+  if (wheelSpinning) { toast(t('wheelBusy')); Sound.error(); return; }
+  if (spinningCase)  { toast(t('wait')); Sound.error(); return; }
 
-  if (!state.inventory.length) { toast('Инвентарь пуст'); Sound.error(); return; }
+  if (!state.inventory.length) { toast(t('invEmptyToast')); Sound.error(); return; }
   let sum = 0;
   state.inventory.forEach(function (x) { sum += ITEMS[x.key].value; });
   state.inventory = [];
@@ -918,7 +1003,7 @@ els.sellAllBtn.addEventListener('click', function () {
   targetKey = null;
   state.coins += sum;
   Sound.coin();
-  toast('Продано всё за 🪙 ' + fmt(sum));
+  toast(t('soldAllFor') + ' 🪙 ' + fmt(sum));
   updateAll();
 });
 
@@ -931,7 +1016,8 @@ els.soundBtn.addEventListener('click', function () {
 });
 
 els.resetBtn.addEventListener('click', function () {
-  if (!confirm('Сбросить весь прогресс? Это действие нельзя отменить.')) return;
+  if (wheelSpinning || spinningCase) { toast(t('waitSpin')); Sound.error(); return; }
+  if (!confirm(t('resetConfirm'))) return;
   state.coins = 1000;
   state.inventory = [];
   state.uid = 1;
@@ -942,7 +1028,7 @@ els.resetBtn.addEventListener('click', function () {
   needleDeg = 0;
   els.needle.style.transform = 'rotate(0deg)';
   Sound.click();
-  toast('Прогресс сброшен');
+  toast(t('resetDone'));
   updateAll();
 });
 
@@ -950,7 +1036,7 @@ els.resetBtn.addEventListener('click', function () {
 els.modalOk.addEventListener('click', function () { Sound.click(); closeModal(); });
 els.modalSell.addEventListener('click', function () {
   // ЗАЩИТА: если колесо крутится — не продаём
-  if (wheelSpinning) { toast('Колесо крутится…'); Sound.error(); return; }
+  if (wheelSpinning) { toast(t('wheelBusy')); Sound.error(); return; }
 
   if (modalUid !== null) {
     const uid = modalUid;
@@ -976,16 +1062,41 @@ document.addEventListener('pointerdown', function () { Sound.unlock(); }, { once
 
 /* горячая клавиша: пробел = крутить */
 document.addEventListener('keydown', function (e) {
+  /* Esc / Enter — закрыть модалку */
+  if (els.modal.classList.contains('is-open')) {
+    if (e.key === 'Escape' || e.key === 'Enter') { e.preventDefault(); closeModal(); }
+    return;
+  }
   if (e.code === 'Space' && document.getElementById('page-upgrades').classList.contains('is-active')) {
     e.preventDefault();
     if (!els.spinBtn.disabled) spinWheel();
   }
 });
 
+/* язык */
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t('docTitle');
+  document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-title]').forEach(function (el) { el.title = t(el.dataset.i18nTitle); });
+  els.invUpgrade.dataset.lock = els.invTargets.dataset.lock = t('wheelBusy');
+  els.spinBtn.textContent = t(wheelSpinning ? 'spinning' : 'spin');
+  if (els.modal.classList.contains('is-open') && modalKey) showModal(modalKey, modalUid, modalTitleKey, true);
+}
+
+$('langBtn').addEventListener('click', function () {
+  if (wheelSpinning || spinningCase) { toast(t('waitSpin')); Sound.error(); return; }
+  lang = lang === 'en' ? 'ru' : 'en';
+  Sound.click();
+  applyLang();
+  updateAll();
+});
+
 /* ============================================================
    12. СТАРТ
    ============================================================ */
 load();
+applyLang();
 els.soundBtn.textContent = Sound.enabled ? '🔊' : '🔇';
 els.soundBtn.classList.toggle('off', !Sound.enabled);
 
